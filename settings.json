@@ -1,0 +1,32 @@
+{
+  "test_dir": "tests",
+  "mode": "exe",
+  "test_suite_names": ["bySeventeen", "recurse", "grades"],
+  "non_zero_exit_status_penalty": 0.75,
+  "memory_penalty": 0.5,
+  "test_suites": {
+    "bySeventeen": [
+      { "desc": "n = 2",  "args": ["2"],  "diff": "normal", "valgrind": false },
+      { "desc": "n = 4",  "args": ["4"],  "diff": "normal", "valgrind": false },
+      { "desc": "n = 7",  "args": ["7"],  "diff": "normal", "valgrind": false },
+      { "desc": "n = 10", "args": ["10"], "diff": "normal", "valgrind": false }
+    ],
+    "recurse": [
+      { "desc": "n = 0",  "args": ["0"],  "diff": "normal", "valgrind": false },
+      { "desc": "n = 2",  "args": ["2"],  "diff": "normal", "valgrind": false },
+      { "desc": "n = 4",  "args": ["4"],  "diff": "normal", "valgrind": false },
+      { "desc": "n = 7",  "args": ["7"],  "diff": "normal", "valgrind": false }
+    ],
+    "grades": [
+      { "desc": "insert",                         "args": ["tests/grades_input_0.txt"], "diff": "normal", "valgrind": true },
+      { "desc": "insert, lookup",                 "args": ["tests/grades_input_1.txt"], "diff": "normal", "valgrind": true },
+      { "desc": "insert, delete, lookup",         "args": ["tests/grades_input_2.txt"], "diff": "normal", "valgrind": true },
+      { "desc": "insert same thing twice",        "args": ["tests/grades_input_3.txt"], "diff": "normal", "valgrind": true },
+      { "desc": "try deleting after deletion",    "args": ["tests/grades_input_4.txt"], "diff": "normal", "valgrind": true },
+      { "desc": "insert and lookup different id", "args": ["tests/grades_input_5.txt"], "diff": "normal", "valgrind": true },
+      { "desc": "a few commands",                 "args": ["tests/grades_input_6.txt"], "diff": "normal", "valgrind": true },
+      { "desc": "random commands",                "args": ["tests/grades_input_7.txt"], "diff": "normal", "valgrind": true },
+      { "desc": "empty file",                     "args": ["tests/grades_input_8.txt"], "diff": "normal", "valgrind": true }
+    ]
+  }
+}
