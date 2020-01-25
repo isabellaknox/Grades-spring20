@@ -1,14 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(){
-    int N;
-    int x;
+int main(int arg, char *arv[]){
+    int N = atoi(arv[1]);
     int tot;
-
-    //get given integer
-    printf("Enter integer to get answer: ");
-    scanf("%d", &N);
+    int x;
 
     // get first N numbers divisible by 17 
     if(N>0){
