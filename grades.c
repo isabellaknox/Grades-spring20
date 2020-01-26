@@ -131,7 +131,7 @@ void delete_student(int student_id)
 
     //bucket is empty
     if (temp == NULL){
-        printf("DELETE (%d) cannot delete because record does not exist", student_id);
+        printf("DELETE (%d) cannot delete because record does not exist\n", student_id);
         return;
     }
     //bucket has students
@@ -150,7 +150,7 @@ void delete_student(int student_id)
         int exam1_score = temp->exam1_score;
         int exam2_score = temp->exam2_score;
         char name[16];
-        printf("DELETE (%d) %d %d %s", student_id, exam1_score, exam2_score, temp->name);
+        printf("DELETE (%d) %d %d %s\n", student_id, exam1_score, exam2_score, temp->name);
         return;
         }
     }
