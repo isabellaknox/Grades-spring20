@@ -147,10 +147,9 @@ void delete_student(int student_id)
             temp = temp-> next;
         }
         free(temp);
-        int exam1_score = temp->exam1_score;
         int exam2_score = temp->exam2_score;
         char name[16];
-        printf("DELETE (%d) %d %d %s\n", student_id, temp->exam2_score, temp->exam2_score, temp->name);
+        printf("DELETE (%d) %d %d %s\n", student_id, temp->exam1_score, temp->exam2_score, temp->name);
         return;
         }
     }
