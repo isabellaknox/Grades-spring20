@@ -1,7 +1,5 @@
-1,3c1,2
-< INSERT (0) 50 66 Sam
+2,3c2
 < DELETE (0) 50 66 Sam
 < LOOKUP (0) record does not exist
 ---
-> INSERT (0) 50 50 Sam
 > LOOKUP (0) 50 66 Sam

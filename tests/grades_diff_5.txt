@@ -1,4 +1,0 @@
-1c1
-< INSERT (0) 0 32 Bob
----
-> INSERT (0) 0 0 Bob

@@ -87,20 +87,20 @@ void insert_student(int student_id, int exam1_score, int exam2_score, char name[
         newstudent->next= NULL;
         //set first node in empty bucket to student
         hashtable[studenthash]= newstudent;
-        printf("INSERT (%d) %d %d %s\n", student_id, exam1_score, exam1_score, name);
+        printf("INSERT (%d) %d %d %s\n", student_id, exam1_score, exam2_score, name);
         return;
         }
 
      // otherwise
      student_t* behind = NULL; 
-         while (temp != NULL){
-            if (student_id == temp->student_id){
-                 printf("INSERT (%d) cannot insert because record exists\n", student_id); 
-                 return;
-                 }
+     while (temp != NULL){
+        if (student_id == temp->student_id){
+            printf("INSERT (%d) cannot insert because record exists\n", student_id); 
+            return;
+        }
         behind = temp;
         temp = temp-> next;
-         }    
+    }    
     
                  //allocate space for new node
                 student_t* newstudent = (struct student*)malloc(sizeof(struct student));

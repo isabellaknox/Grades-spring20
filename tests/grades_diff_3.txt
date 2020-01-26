@@ -1,4 +1,0 @@
-1c1
-< INSERT (917) 70 16 Sam
----
-> INSERT (917) 70 70 Sam

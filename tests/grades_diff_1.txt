@@ -1,4 +1,0 @@
-1c1
-< INSERT (15) 50 66 Sam
----
-> INSERT (15) 50 50 Sam

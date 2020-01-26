@@ -1,1 +1,1 @@
-INSERT (23) 89 89 Bob
+INSERT (23) 89 76 Bob
