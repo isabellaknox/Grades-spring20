@@ -2,17 +2,17 @@ LOOKUP (9) record does not exist
 LOOKUP (9) record does not exist
 INSERT (9) 91 66 wX
 LOOKUP (9) 91 66 wX
-DELETE (9) 66 66 wX
+DELETE (9) 0 66 wX
 LOOKUP (0) record does not exist
 INSERT (1) 41 62 hMFICtGln
 INSERT (17) 99 23 puMi
-DELETE (17) 23 23 puMi
+DELETE (17) 0 23 puMi
 DELETE (15) cannot delete because record does not exist
 INSERT (3) 32 20 aWcGb
 INSERT (3) cannot insert because record exists
 INSERT (4) 88 45 hJMKVeElDBITYZD
 LOOKUP (7) record does not exist
-DELETE (1) 62 62 hMFICtGln
+DELETE (1) 0 62 hMFICtGln
 LOOKUP (3) 32 20 aWcGb
 LOOKUP (4) 88 45 hJMKVeElDBITYZD
 INSERT (15) 37 62 WWilQwlQPdz
@@ -30,8 +30,8 @@ INSERT (4) cannot insert because record exists
 INSERT (25) cannot insert because record exists
 LOOKUP (3) 32 20 aWcGb
 LOOKUP (25) 0 89 GLLZrBEf
-DELETE (4) 45 45 hJMKVeElDBITYZD
-DELETE (25) 89 89 GLLZrBEf
+DELETE (4) 0 45 hJMKVeElDBITYZD
+DELETE (25) 0 89 GLLZrBEf
 INSERT (14) 23 48 xgjZGoGeN
 INSERT (25) 24 47 JyThCWtvELXWzA
 INSERT (2) 27 27 V
@@ -61,7 +61,7 @@ LOOKUP (14) 23 48 xgjZGoGeN
 LOOKUP (15) 37 62 WWilQwlQPdz
 INSERT (0) cannot insert because record exists
 INSERT (0) cannot insert because record exists
-DELETE (2) 27 27 V
+DELETE (2) 0 27 V
 INSERT (3) cannot insert because record exists
 INSERT (2) 19 19 qZhEWQYgFrMeU
 DELETE (11) cannot delete because record does not exist

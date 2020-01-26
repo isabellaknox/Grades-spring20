@@ -5,8 +5,8 @@
 5c5
 < DELETE (10) 70 85 Sam
 ---
-> DELETE (10) 85 85 Sam
+> DELETE (10) 0 85 Sam
 9c9
 < DELETE (132) 45 90 Jose
 ---
-> DELETE (132) 90 90 Jose
+> DELETE (132) 0 90 Jose
