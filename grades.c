@@ -11,13 +11,24 @@
 #include <string.h>
 
 // TODO: Implement
+struct student{
+    int student_id;
+    int exam1_score;
+    int exam2_score;
+    char name[16];
+    struct student* next;
+}
+
+struct student* hashtable[13];
+
 
 /*
- * Sinple hash function.
+ * Simple hash function.
  */
 int hash(int i)
 {
-    // TODO: Implement
+    // creates hash codes to know which bucket to place item in 
+    return (i % 13);
 }
 
 /*
@@ -25,15 +36,23 @@ int hash(int i)
  */
 void init_hash_table()
 {
-    // TODO: Implement
+    for (int i; i <=13;i++){
+        //hastable[i]= (student*)malloc(sizeof(student)); // allocate memory for each node
+        hashtable[i]== NULL;
+    }
 }
 
 /*
  * Deallocate the hash table.
  */
-void dealloc_hash_table()
-{
+void dealloc_hash_table(){
+
     // TODO: Implement
+    for (int i; i<= 13; i++){
+        if (hashtable[i]==NULL){
+            free(hashtable[i];)
+        }
+    }
 }
 
 /*
@@ -63,7 +82,36 @@ void delete_student(int student_id)
  */
 void lookup_student(int student_id)
 {
-    // TODO: Implement
+    // get hash code
+    int studenthash = hash(student_id);
+    // pointer
+    struct student* temp;
+    struct student* next;
+    // go through array 
+    for (int i=0; i<=13; i++){
+        if (hashtable[i] == studenthash){
+                temp = hashtable[i];
+                next = hashtable[i+1]
+                   while (temp != NULL){
+                       if (next != NULL){
+                          if (student_id== temp){
+                         printf("LOOKUP (%d) %d %d %s\n", student_id, exam1_score, exam2_score, name);  
+                       }
+                       
+                       
+                       temp-> next;
+                       temp = temp->next;
+                       
+                }
+                   }
+            
+        }
+        else{
+
+        }
+
+    }
+
 }
 
 /*
