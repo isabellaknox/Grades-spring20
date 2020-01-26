@@ -123,6 +123,37 @@ void insert_student(int student_id, int exam1_score, int exam2_score, char name[
  */
 void delete_student(int student_id)
 {
+    int studenthash = hash(student_id);
+    student_t* temp;
+    student_t* behind;
+    temp = hashtable[studenthash];
+    behind = NULL;
+
+    //bucket is empty
+    if (temp == NULL){
+        printf("DELETE (%d) cannot delete because record does not exist", student_id);
+        return;
+    }
+    //bucket has students
+    else{
+        while (temp!= NULL){
+        //if first item
+        if (student_id == temp->student_id){
+            hashtable[studenthash]=temp->next;
+        }
+        else{
+
+            behind = temp;
+            temp = temp-> next;
+        }
+        free(temp);
+        int exam1_score = temp->exam1_score;
+        int exam2_score = temp->exam2_score;
+        char name[16];
+        printf("DELETE (%d) %d %d %s", student_id, exam1_score, exam2_score, temp->name);
+        return;
+        }
+    }
 
  
 }

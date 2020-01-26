@@ -2,17 +2,17 @@ LOOKUP (9) record does not exist
 LOOKUP (9) record does not exist
 INSERT (9) 91 66 wX
 LOOKUP (9) 91 66 wX
-LOOKUP (0) record does not exist
+DELETE (9) 0 66 wXLOOKUP (0) record does not exist
 INSERT (1) 41 62 hMFICtGln
 INSERT (17) 99 23 puMi
-INSERT (3) 32 20 aWcGb
+DELETE (17) 0 23 puMiDELETE (15) cannot delete because record does not existINSERT (3) 32 20 aWcGb
 INSERT (3) cannot insert because record exists
-INSERT (4) 88 88 hJMKVeElDBITYZD
+INSERT (4) 88 45 hJMKVeElDBITYZD
 LOOKUP (7) record does not exist
-LOOKUP (3) 32 20 aWcGb
+DELETE (1) 0 62 hMFICtGlnLOOKUP (3) 32 20 aWcGb
 LOOKUP (4) 88 45 hJMKVeElDBITYZD
 INSERT (15) 37 62 WWilQwlQPdz
-LOOKUP (3) 32 20 aWcGb
+DELETE (7) cannot delete because record does not existLOOKUP (3) 32 20 aWcGb
 LOOKUP (4) 88 45 hJMKVeElDBITYZD
 LOOKUP (15) 37 62 WWilQwlQPdz
 LOOKUP (3) 32 20 aWcGb
@@ -25,8 +25,8 @@ INSERT (4) cannot insert because record exists
 INSERT (25) cannot insert because record exists
 LOOKUP (3) 32 20 aWcGb
 LOOKUP (25) 0 89 GLLZrBEf
-INSERT (14) 23 23 xgjZGoGeN
-INSERT (25) cannot insert because record exists
+DELETE (4) 0 45 hJMKVeElDBITYZDDELETE (25) 0 89 GLLZrBEfINSERT (14) 23 48 xgjZGoGeN
+INSERT (25) 24 47 JyThCWtvELXWzA
 INSERT (2) 27 27 V
 INSERT (0) 51 92 QktiaO
 INSERT (0) cannot insert because record exists
@@ -40,20 +40,20 @@ LOOKUP (0) 51 92 QktiaO
 LOOKUP (2) 27 27 V
 LOOKUP (3) 32 20 aWcGb
 LOOKUP (7) 27 74 CMyPSwV
-LOOKUP (25) 0 89 GLLZrBEf
+LOOKUP (25) 24 47 JyThCWtvELXWzA
 LOOKUP (14) 23 48 xgjZGoGeN
 LOOKUP (15) 37 62 WWilQwlQPdz
-INSERT (4) cannot insert because record exists
+INSERT (4) 90 25 eF
 LOOKUP (0) 51 92 QktiaO
 LOOKUP (2) 27 27 V
 LOOKUP (3) 32 20 aWcGb
-LOOKUP (4) 88 45 hJMKVeElDBITYZD
+LOOKUP (4) 90 25 eF
 LOOKUP (7) 27 74 CMyPSwV
-LOOKUP (25) 0 89 GLLZrBEf
+LOOKUP (25) 24 47 JyThCWtvELXWzA
 LOOKUP (14) 23 48 xgjZGoGeN
 LOOKUP (15) 37 62 WWilQwlQPdz
 INSERT (0) cannot insert because record exists
 INSERT (0) cannot insert because record exists
-INSERT (3) cannot insert because record exists
-INSERT (2) cannot insert because record exists
-INSERT (19) 18 23 YC
+DELETE (2) 0 27 VINSERT (3) cannot insert because record exists
+INSERT (2) 19 19 qZhEWQYgFrMeU
+DELETE (11) cannot delete because record does not existINSERT (19) 18 23 YC

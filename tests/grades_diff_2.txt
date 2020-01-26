@@ -2,4 +2,4 @@
 < DELETE (0) 50 66 Sam
 < LOOKUP (0) record does not exist
 ---
-> LOOKUP (0) 50 66 Sam
+> DELETE (0) 0 66 SamLOOKUP (0) record does not exist

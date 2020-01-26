@@ -1,1 +1,2 @@
 INSERT (88) 99 100 Joe
+DELETE (88) 0 100 JoeDELETE (88) cannot delete because record does not exist

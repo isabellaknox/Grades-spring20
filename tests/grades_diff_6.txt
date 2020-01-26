@@ -6,9 +6,9 @@
 < DELETE (10) 70 85 Sam
 < LOOKUP (10) record does not exist
 ---
-> LOOKUP (10) 70 85 Sam
+> DELETE (10) 0 85 SamLOOKUP (10) record does not exist
 9,10c8
 < DELETE (132) 45 90 Jose
 < LOOKUP (132) record does not exist
 ---
-> LOOKUP (132) 45 90 Jose
+> DELETE (132) 0 90 JoseLOOKUP (132) record does not exist
