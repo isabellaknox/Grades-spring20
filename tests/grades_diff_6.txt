@@ -2,13 +2,11 @@
 < INSERT (10) 70 85 Sam
 ---
 > INSERT (10) 70 70 Sam
-5,6c5
+5c5
 < DELETE (10) 70 85 Sam
-< LOOKUP (10) record does not exist
 ---
-> DELETE (10) 0 85 SamLOOKUP (10) record does not exist
-9,10c8
+> DELETE (10) 0 85 Sam
+9c9
 < DELETE (132) 45 90 Jose
-< LOOKUP (132) record does not exist
 ---
-> DELETE (132) 0 90 JoseLOOKUP (132) record does not exist
+> DELETE (132) 0 90 Jose
