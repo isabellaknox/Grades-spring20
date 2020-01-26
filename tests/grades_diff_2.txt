@@ -1,4 +1,4 @@
 2c2
 < DELETE (0) 50 66 Sam
 ---
-> DELETE (0) 0 66 Sam
+> DELETE (0) 66 66 Sam

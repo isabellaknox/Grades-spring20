@@ -1,4 +1,4 @@
 2c2
 < DELETE (88) 99 100 Joe
 ---
-> DELETE (88) 0 100 Joe
+> DELETE (88) 100 100 Joe
