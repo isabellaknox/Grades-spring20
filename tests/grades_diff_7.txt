@@ -1,0 +1,72 @@
+3c3
+< INSERT (9) 91 66 wX
+---
+> INSERT (9) 91 91 wX
+5d4
+< DELETE (9) 91 66 wX
+7,11c6,8
+< INSERT (1) 41 62 hMFICtGln
+< INSERT (17) 99 23 puMi
+< DELETE (17) 99 23 puMi
+< DELETE (15) cannot delete because record does not exist
+< INSERT (3) 32 20 aWcGb
+---
+> INSERT (1) 41 41 hMFICtGln
+> INSERT (17) 99 99 puMi
+> INSERT (3) 32 32 aWcGb
+13c10
+< INSERT (4) 88 45 hJMKVeElDBITYZD
+---
+> INSERT (4) 88 88 hJMKVeElDBITYZD
+15d11
+< DELETE (1) 41 62 hMFICtGln
+18,19c14
+< INSERT (15) 37 62 WWilQwlQPdz
+< DELETE (7) cannot delete because record does not exist
+---
+> INSERT (15) 37 37 WWilQwlQPdz
+27c22
+< INSERT (25) 0 89 GLLZrBEf
+---
+> INSERT (25) 0 0 GLLZrBEf
+33,36c28,29
+< DELETE (4) 88 45 hJMKVeElDBITYZD
+< DELETE (25) 0 89 GLLZrBEf
+< INSERT (14) 23 48 xgjZGoGeN
+< INSERT (25) 24 47 JyThCWtvELXWzA
+---
+> INSERT (14) 23 23 xgjZGoGeN
+> INSERT (25) cannot insert because record exists
+38c31
+< INSERT (0) 51 92 QktiaO
+---
+> INSERT (0) 51 51 QktiaO
+40c33
+< INSERT (7) 27 74 CMyPSwV
+---
+> INSERT (7) 27 27 CMyPSwV
+50c43
+< LOOKUP (25) 24 47 JyThCWtvELXWzA
+---
+> LOOKUP (25) 0 89 GLLZrBEf
+53c46
+< INSERT (4) 90 25 eF
+---
+> INSERT (4) cannot insert because record exists
+57c50
+< LOOKUP (4) 90 25 eF
+---
+> LOOKUP (4) 88 45 hJMKVeElDBITYZD
+59c52
+< LOOKUP (25) 24 47 JyThCWtvELXWzA
+---
+> LOOKUP (25) 0 89 GLLZrBEf
+64d56
+< DELETE (2) 27 27 V
+66,68c58,59
+< INSERT (2) 19 0 qZhEWQYgFrMeU
+< DELETE (11) cannot delete because record does not exist
+< INSERT (19) 18 23 YC
+---
+> INSERT (2) cannot insert because record exists
+> INSERT (19) 18 18 YC

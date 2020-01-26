@@ -11,15 +11,15 @@
 #include <string.h>
 
 // TODO: Implement
-struct student{
+typedef struct student{
     int student_id;
     int exam1_score;
     int exam2_score;
     char name[16];
     struct student* next;
-}
+}student_t;
 
-struct student* hashtable[13];
+student_t *hashtable[13];
 
 
 /*
@@ -48,14 +48,18 @@ void init_hash_table()
  */
 void dealloc_hash_table(){
 
-    // TODO: Implement
-    struct student* currentstudent;
+    student_t *currentstudent;
+    student_t *paststudent;
     for (int i; i<= 13; i++){
         currentstudent = hashtable[i];
-            while (currentstudent != NULL){
-            free(currentstudent);
-            }
+        student_t *forward =hashtable[i]->next;
+        while (currentstudent != NULL){
+            paststudent = currentstudent;
+            free(paststudent);
+            currentstudent = currentstudent->next;
+
         }
+    }
 
 }
 
@@ -68,56 +72,48 @@ void insert_student(int student_id, int exam1_score, int exam2_score, char name[
 {
      // get hash code
     int studenthash = hash(student_id);
-    // pointer
-    struct student* temp;
+    student_t* temp;
     
     // temp points at the first node in the linked list (the index of the array)
-     temp = hashtable[studenthash];
+    temp = hashtable[studenthash];
 
      // if bucket is completely empty 
      if (temp == NULL){
-         //allocate space for new node
-        struct student* newstudent = (struct student*)malloc(sizeof(struct student));
-        // get info from struct fields
-        newstudent->student_id = student_id 
-        newstudent->exam1_score = exam1_score 
+        student_t* newstudent = (struct student*)malloc(sizeof(struct student));
+        newstudent->student_id = student_id;
+        newstudent->exam1_score = exam1_score;
         newstudent->exam2_score = exam2_score;
         strcpy(newstudent->name, name);
-        newstudent->next= NULL);
+        newstudent->next= NULL;
         //set first node in empty bucket to student
         hashtable[studenthash]= newstudent;
-        //print statement
         printf("INSERT (%d) %d %d %s\n", student_id, exam1_score, exam1_score, name);
-        //exit if statement
         return;
-         }
+        }
 
      // otherwise
-        struct student* behind = NULL; 
+     student_t* behind = NULL; 
          while (temp != NULL){
             if (student_id == temp->student_id){
                  printf("INSERT (%d) cannot insert because record exists\n", student_id); 
                  return;
                  }
-            behind = temp;
-            temp = temp-> next;
-         }
+        behind = temp;
+        temp = temp-> next;
+         }    
+    
                  //allocate space for new node
-                struct student* newstudent = (struct student*)malloc(sizeof(struct student));
+                student_t* newstudent = (struct student*)malloc(sizeof(struct student));
                  // get info from struct fields
-                newstudent->student_id = student_id 
-                newstudent->exam1_score = exam1_score 
+                newstudent->student_id = student_id;
+                newstudent->exam1_score = exam1_score; 
                 newstudent->exam2_score = exam2_score;
                 strcpy(newstudent->name, name);
-                newstudent->next= NULL);
+                newstudent->next= NULL;
                 //set temp in empty bucket to student
                 behind->next = newstudent;
-                //print statement
                 printf("INSERT (%d) %d %d %s\n", student_id, exam1_score, exam1_score, name);
-                //exit if statement
                 return;
-         }
-
 }
 
 /*
@@ -127,7 +123,8 @@ void insert_student(int student_id, int exam1_score, int exam2_score, char name[
  */
 void delete_student(int student_id)
 {
-    // TODO: Implement
+
+ 
 }
 
 /*
@@ -139,19 +136,27 @@ void lookup_student(int student_id)
 {
     // get hash code
     int studenthash = hash(student_id);
+    int exam2_score;
+    int exam1_score;
+    char name[16];
     // pointer
-    struct student* temp;
+    student_t* temp;
      temp = hashtable[studenthash];
          while (temp != NULL){
             if (student_id == temp->student_id){
-                 printf("LOOKUP (%d) %d %d %s\n", student_id, exam1_score, exam2_score, name); 
+                exam1_score = temp->exam1_score;
+                exam2_score = temp->exam2_score;
+                 printf("LOOKUP (%d) %d %d %s\n", student_id, exam1_score, exam2_score, temp->name); 
                  return;
                  }
         
-            temp = temp-> next;
+            temp = temp->next;
          
-         printf("LOOKUP (%d) record does not exist\n", student_id);
+         
          }
+         printf("LOOKUP (%d) record does not exist\n", student_id);
+         return;
+}
 
 /*
  * main:
@@ -159,8 +164,7 @@ void lookup_student(int student_id)
  *   - Opens and parses the file.
  *   - Calls the appropriate hash table functions.
  */
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]){
     init_hash_table();
 
     FILE *fptr;

@@ -1,0 +1,2 @@
+INSERT (0) 50 50 Sam
+LOOKUP (0) 50 66 Sam

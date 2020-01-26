@@ -1,0 +1,4 @@
+1c1
+< INSERT (23) 89 76 Bob
+---
+> INSERT (23) 89 89 Bob
