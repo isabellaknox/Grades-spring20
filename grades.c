@@ -132,8 +132,9 @@ void delete_student(int student_id)
     //bucket has students
     else{
         
+        
         //if first item
-        if (student_id == hashtable[studenthash]->student_id){
+        if (student_id == temp->student_id){
             hashtable[studenthash]=temp->next;
             int exam2_score = temp->exam2_score;
             //char name[16];
@@ -147,8 +148,10 @@ void delete_student(int student_id)
             if (temp->next->student_id == student_id){
                 int exam2_score = temp->exam2_score;
                 //char name[16];
-                printf("DELETE (%d) %d %d %s\n", student_id, temp->exam1_score, temp->exam2_score, temp->name);
-                free(temp->next);
+                printf("DELETE (%d) %d %d %s\n", student_id, temp->next->exam1_score, temp->next->exam2_score, temp->next->name);
+                student_t* middle = temp->next;
+                temp->next = temp->next->next;
+                free(middle);
                 return;
             }        
             temp = temp-> next;

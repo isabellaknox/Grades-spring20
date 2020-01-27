@@ -1,4 +1,0 @@
-5c5
-< DELETE (10) 70 85 Sam
----
-> DELETE (10) 89 76 Bob
