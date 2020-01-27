@@ -63,6 +63,6 @@ INSERT (0) cannot insert because record exists
 INSERT (0) cannot insert because record exists
 DELETE (2) 27 27 V
 INSERT (3) cannot insert because record exists
-INSERT (2) 19 19 qZhEWQYgFrMeU
+INSERT (2) 19 0 qZhEWQYgFrMeU
 DELETE (11) cannot delete because record does not exist
 INSERT (19) 18 23 YC
