@@ -84,10 +84,10 @@ void insert_student(int student_id, int exam1_score, int exam2_score, char name[
         newstudent->exam1_score = exam1_score;
         newstudent->exam2_score = exam2_score;
         strcpy(newstudent->name, name);
+        printf("INSERT (%d) %d %d %s\n", student_id, exam1_score, exam2_score, name);
         newstudent->next= NULL;
         //set first node in empty bucket to student
         hashtable[studenthash]= newstudent;
-        printf("INSERT (%d) %d %d %s\n", student_id, exam1_score, exam2_score, name);
         return;
         }
 
