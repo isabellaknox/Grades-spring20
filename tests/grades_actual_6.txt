@@ -2,7 +2,7 @@ INSERT (23) 89 76 Bob
 INSERT (10) 70 85 Sam
 LOOKUP (23) 89 76 Bob
 LOOKUP (10) 70 85 Sam
-DELETE (10) 70 85 Sam
+DELETE (10) 89 76 Bob
 LOOKUP (10) record does not exist
 INSERT (132) 45 90 Jose
 INSERT (264) 7 100 Alice

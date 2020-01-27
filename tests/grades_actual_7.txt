@@ -61,7 +61,7 @@ LOOKUP (14) 23 48 xgjZGoGeN
 LOOKUP (15) 37 62 WWilQwlQPdz
 INSERT (0) cannot insert because record exists
 INSERT (0) cannot insert because record exists
-DELETE (2) 27 27 V
+DELETE (2) 37 62 WWilQwlQPdz
 INSERT (3) cannot insert because record exists
 INSERT (2) 19 0 qZhEWQYgFrMeU
 DELETE (11) cannot delete because record does not exist

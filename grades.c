@@ -27,7 +27,6 @@ student_t *hashtable[13];
  */
 int hash(int i)
 {
-    // creates hash codes to know which bucket to place item in 
 
     // return the number of the bucket the student id is in 
     return (i%13);
@@ -38,8 +37,8 @@ int hash(int i)
  */
 void init_hash_table()
 {
-    for (int i; i <=13;i++){
-        hashtable[i]== NULL;
+    for (int i=0; i <13;i++){
+        hashtable[i]=NULL;
     }
 }
 
@@ -50,14 +49,13 @@ void dealloc_hash_table(){
 
     student_t *currentstudent;
     student_t *paststudent;
-    for (int i; i<= 13; i++){
+    for (int i=0; i<13; i++){
         currentstudent = hashtable[i];
-        student_t *forward =hashtable[i]->next;
+       //student_t *forward = hashtable[i]->next;
         while (currentstudent != NULL){
-            paststudent = currentstudent;
-            free(paststudent);
+            paststudent = currentstudent;  
             currentstudent = currentstudent->next;
-
+            free(paststudent);
         }
     }
 
@@ -68,18 +66,15 @@ void dealloc_hash_table(){
  * If the record already exists, print "INSERT (<ID>) cannot insert because record exists".
  * If the record does not exist, print "INSERT (<ID>) <Exam 1 Score> <Exam 2 Score> <Name>".
  */
-void insert_student(int student_id, int exam1_score, int exam2_score, char name[])
-{
+void insert_student(int student_id, int exam1_score, int exam2_score, char name[]) {
      // get hash code
     int studenthash = hash(student_id);
     student_t* temp;
-    
     // temp points at the first node in the linked list (the index of the array)
     temp = hashtable[studenthash];
-
      // if bucket is completely empty 
      if (temp == NULL){
-        student_t* newstudent = (struct student*)malloc(sizeof(struct student));
+        student_t* newstudent = (student_t*)malloc(sizeof(student_t));
         newstudent->student_id = student_id;
         newstudent->exam1_score = exam1_score;
         newstudent->exam2_score = exam2_score;
@@ -102,12 +97,12 @@ void insert_student(int student_id, int exam1_score, int exam2_score, char name[
         temp = temp-> next;
     }    
     
-                 //allocate space for new node
-                student_t* newstudent = (struct student*)malloc(sizeof(struct student));
-                 // get info from struct fields
-                newstudent->student_id = student_id;
-                newstudent->exam1_score = exam1_score; 
-                newstudent->exam2_score = exam2_score;
+     //allocate space for new node
+    student_t* newstudent = (student_t*)malloc(sizeof(student_t));
+    // get info from struct fields
+    newstudent->student_id = student_id;
+    newstudent->exam1_score = exam1_score; 
+    newstudent->exam2_score = exam2_score;
                 strcpy(newstudent->name, name);
                 printf("INSERT (%d) %d %d %s\n", student_id, exam1_score, exam2_score, name);
                 newstudent->next= NULL;
@@ -136,27 +131,36 @@ void delete_student(int student_id)
     }
     //bucket has students
     else{
-        while (temp!= NULL){
+        
         //if first item
-        if (student_id == temp->student_id){
+        if (student_id == hashtable[studenthash]->student_id){
             hashtable[studenthash]=temp->next;
+            int exam2_score = temp->exam2_score;
+            //char name[16];
+            printf("DELETE (%d) %d %d %s\n", student_id, temp->exam1_score, temp->exam2_score, temp->name);
+            free(temp);
+            return;
+
         }
         else{
-
-            behind = temp;
+        while (temp!= NULL){
+            if (temp->next->student_id == student_id){
+                int exam2_score = temp->exam2_score;
+                //char name[16];
+                printf("DELETE (%d) %d %d %s\n", student_id, temp->exam1_score, temp->exam2_score, temp->name);
+                free(temp->next);
+                return;
+            }        
             temp = temp-> next;
+
         }
+        printf("DELETE (%d) cannot delete because record does not exist\n", student_id);
         
-        int exam2_score = temp->exam2_score;
-        char name[16];
-        printf("DELETE (%d) %d %d %s\n", student_id, temp->exam1_score, temp->exam2_score, temp->name);
-        free(temp);
-        return;
         }
     }
+    }
 
- 
-}
+
 
 /*
  * Print all the member variables for the record with the specified ID, if it exists in the hash table.
