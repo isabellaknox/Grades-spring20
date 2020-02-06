@@ -144,8 +144,8 @@ void delete_student(int student_id)
 
         }
         else{
-        while (temp!= NULL){
-            if (temp->next->student_id == student_id){
+        while (temp!= NULL){ ///// HERE IS MY SEG FAULT //// MAYBE here 
+            if (temp->student_id == student_id){ /// took away temp->next  //// probs 
                 int exam2_score = temp->exam2_score;
                 //char name[16];
                 printf("DELETE (%d) %d %d %s\n", student_id, temp->next->exam1_score, temp->next->exam2_score, temp->next->name);
